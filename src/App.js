@@ -17,7 +17,7 @@ function App() {
         "https://api.themoviedb.org/3/trending/movie/day?language=en-US",
         {
           headers: {
-            Authorization: `Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI2ODkyNzNmYjMxZTYyYjBiZDlhMzRhOWQ5ZjU4OGQ2YSIsIm5iZiI6MTczODI1NDQ4NC4zOTM5OTk4LCJzdWIiOiI2NzliYTg5NGIwMGQzYmFkOTJiZDhhMTgiLCJzY29wZXMiOlsiYXBpX3JlYWQiXSwidmVyc2lvbiI6MX0.27jex5OJ3KY87cWpJWSHq3E_oasrG4u5Cat9E2VXBCw`,
+            Authorization: `Bearer ${process.env.REACT_APP_API_KEY}`,
           },
         }
       );
@@ -36,7 +36,7 @@ function App() {
         `https://api.themoviedb.org/3/trending/movie/day?language=en-US&page=${page}`,
         {
           headers: {
-            Authorization: `Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI2ODkyNzNmYjMxZTYyYjBiZDlhMzRhOWQ5ZjU4OGQ2YSIsIm5iZiI6MTczODI1NDQ4NC4zOTM5OTk4LCJzdWIiOiI2NzliYTg5NGIwMGQzYmFkOTJiZDhhMTgiLCJzY29wZXMiOlsiYXBpX3JlYWQiXSwidmVyc2lvbiI6MX0.27jex5OJ3KY87cWpJWSHq3E_oasrG4u5Cat9E2VXBCw`,
+            Authorization: `Bearer ${process.env.REACT_APP_API_KEY}`,
           },
         }
       );
@@ -62,7 +62,7 @@ function App() {
         `https://api.themoviedb.org/3/search/movie?query=${movie}`,
         {
           headers: {
-            Authorization: `Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI2ODkyNzNmYjMxZTYyYjBiZDlhMzRhOWQ5ZjU4OGQ2YSIsIm5iZiI6MTczODI1NDQ4NC4zOTM5OTk4LCJzdWIiOiI2NzliYTg5NGIwMGQzYmFkOTJiZDhhMTgiLCJzY29wZXMiOlsiYXBpX3JlYWQiXSwidmVyc2lvbiI6MX0.27jex5OJ3KY87cWpJWSHq3E_oasrG4u5Cat9E2VXBCw`,
+            Authorization: `Bearer ${process.env.REACT_APP_API_KEY}`,
           },
         }
       );
