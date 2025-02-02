@@ -1,10 +1,15 @@
 import React from "react";
 import ReactPaginate from "react-paginate";
+import { useSelector, useDispatch } from "react-redux";
+import { fetchMoviesByPage } from "../Redux/actions/movieActions";
 
-const CustomPagination = ({ getPage, pageCount }) => {
+const CustomPagination = () => {
+  const dispatch = useDispatch();
+  const { pageCount, searchQuery } = useSelector((state) => state.movies);
   const handlePageClick = (data) => {
-    getPage(data.selected + 1);
+    dispatch(fetchMoviesByPage(data.selected + 1, searchQuery));
   };
+
   return (
     <ReactPaginate
       breakLabel="..."
